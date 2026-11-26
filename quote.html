@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#121a16">
+  <meta name="description" content="宋子松的销售报价项目。看一次临时扩店怎样改价、解释差额，并在同一张单据上完成。">
+  <title>销售报价 · 作品台</title>
+  <link rel="stylesheet" href="./site.css?v=2">
+  <link rel="stylesheet" href="./case.css?v=4">
+  <link rel="stylesheet" href="./quote.css?v=4">
+  <script defer src="./quote.js?v=4"></script>
+  <script defer src="./site.js?v=4"></script>
+</head>
+<body class="case-page" data-page="quote">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="wrap nav-row">
+      <a class="wordmark" href="./index.html">宋子松作品台</a>
+      <nav aria-label="网站导航">
+        <a href="./quote.html" aria-current="page">销售报价</a>
+        <a href="./cashflow.html">门店现金流</a>
+        <a class="case-catalog" href="./work.html">工具展厅</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap detail">
+    <header class="case-heading">
+      <div><h1>销售报价</h1><p>正在核实谁用它、给谁报价、报价包含什么。现有原型演示的是标准 SaaS 加店报价的假设场景。</p></div>
+      <img src="./art/quote.webp?v=4" width="1440" height="960" alt="">
+    </header>
+    <nav class="case-view-nav" data-case-nav aria-label="案例章节">
+      <a href="#quote-overview">项目总览</a><a href="#quote-design">需求核对</a><a href="#quote-app">早期样例</a>
+    </nav>
+    <section class="case-overview" id="quote-overview" data-case-panel>
+      <h2>报价场景怎么定</h2>
+      <a href="#quote-design"><strong>需求核对</strong><span>确认实际使用者、报价对象和现有数据，再确定工具帮销售完成哪一步。</span><span aria-hidden="true">↗</span></a>
+      <a href="#quote-app"><strong>早期样例</strong><span>假设销售给连锁门店报标准套餐价，演示扩店时怎样解释订阅与服务差额。</span><span aria-hidden="true">↗</span></a>
+    </section>
+    <section id="quote-design" class="case-design" data-case-panel aria-labelledby="quote-design-title">
+      <h2 id="quote-design-title">需求核对</h2>
+      <dl>
+        <div><dt>已知的开发方向</dt><dd>会议提到当时在做销售报价工具，它相对独立，适合产品先搭建，研发再接入已有系统。</dd></div>
+        <div><dt>要确认的报价场景</dt><dd>确认由谁操作、给谁报价、客户当时提出了什么。标准套餐报价需要核产品、数量和折扣。定制开发估价还需要知道工作量、交付成本及定价权限。</dd></div>
+        <div><dt>先核对数据来源</dt><dd>检查所需字段是否已能通过授权的只读接口或导出取得，再决定哪些规则可以自动计算，哪些估算要人工确认。</dd></div>
+      </dl>
+      <a class="case-design-link" href="#quote-app">看早期样例 <span aria-hidden="true">↓</span></a>
+    </section>
+    <section id="quote-app" data-case-panel aria-label="销售报价操作区"></section>
+    <nav class="detail-next" aria-label="继续浏览">
+      <a class="action action-outline" href="./index.html">返回作品台</a>
+      <a class="action action-outline" href="./cashflow.html">门店现金流 <span aria-hidden="true">↗</span></a>
+    </nav>
+  </main>
+  <footer class="site-footer"><div class="wrap"><span>宋子松 · 作品台</span><a href="#main">返回顶部</a></div></footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#121a16">
+  <meta name="description" content="宋子松的门店现金流设计案例，复盘原测算器的核销规则，用模拟数据说明存量余额如何影响供货支出。">
+  <title>门店现金流 · 作品台</title>
+  <link rel="stylesheet" href="./site.css?v=2">
+  <link rel="stylesheet" href="./case.css?v=4">
+  <link rel="stylesheet" href="./cashflow.css?v=4">
+  <script defer src="./cashflow.js?v=4"></script>
+  <script defer src="./site.js?v=4"></script>
+</head>
+<body class="case-page" data-page="cashflow">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="wrap nav-row">
+      <a class="wordmark" href="./index.html">宋子松作品台</a>
+      <nav aria-label="网站导航">
+        <a href="./quote.html">销售报价</a>
+        <a href="./cashflow.html" aria-current="page">门店现金流</a>
+        <a class="case-catalog" href="./work.html">工具展厅</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap detail">
+    <header class="case-heading">
+      <div><h1>门店现金流</h1><p>复盘原测算器的一个问题：当月到账归零，老客户的余额去哪了？</p></div>
+      <img src="./art/cash.webp?v=3" width="1440" height="960" alt="">
+    </header>
+    <nav class="case-view-nav" data-case-nav aria-label="案例章节">
+      <a href="#cashflow-overview">项目总览</a><a href="#cashflow-design">设计思路</a><a href="#cashflow-app">原型演示</a>
+    </nav>
+    <section class="case-overview" id="cashflow-overview" data-case-panel>
+      <h2>从问题到原型</h2>
+      <a href="#cashflow-design"><strong>设计思路</strong><span>从零到账月份的核销盲点出发，重新组织回款、存量余额和供货支出的关系。</span><span aria-hidden="true">↗</span></a>
+      <a href="#cashflow-app"><strong>原型演示</strong><span>用第 11 月和第 12 月的模拟账，核对同月两套规则怎么算。</span><span aria-hidden="true">↗</span></a>
+    </section>
+    <section id="cashflow-design" class="case-design" data-case-panel aria-labelledby="cash-design-title">
+      <h2 id="cash-design-title">设计思路</h2>
+      <dl>
+        <div><dt>找出原公式的盲点</dt><dd>原工具以当月到账为核销基数。到账归零时，即使老客户的余额仍可用，公式算出的核销和当月供货支出也都是零。</dd></div>
+        <div><dt>把同一个月并排看</dt><dd>原型把同月到账放在两列上方，再分别列出原规则和改进规则下各自累积的余额、核销基数与供货支出。推进一个月，就能看见变化出在哪一步。</dd></div>
+        <div><dt>把账上的钱和责任分开</dt><dd>账上现金记录钱何时花出去，未核销余额和供货预留记录还要承担的支出。供货和预留采用同一成本率时，兑现顺序改变现金和预留的分布，预留后的可动用资金相同。</dd></div>
+      </dl>
+      <p class="case-design-example">模拟案例从第 11 月推进到第 12 月，到账从 ¥8,550 降到 ¥0。原规则当月供货支出为 ¥0，改进规则估算用存量余额兑现仍需支出 ¥5,920。</p>
+      <a class="case-design-link" href="#cashflow-app">看对照原型 ↓</a>
+    </section>
+    <section id="cashflow-app" data-case-panel aria-label="门店现金流操作区"></section>
+    <nav class="detail-next" aria-label="继续浏览">
+      <a class="action action-outline" href="./index.html">返回作品台</a>
+      <a class="action action-outline" href="./work.html">工具展厅 <span aria-hidden="true">↗</span></a>
+    </nav>
+  </main>
+  <footer class="site-footer"><div class="wrap"><span>宋子松 · 作品台</span><a href="#main">返回顶部</a></div></footer>
+</body>
+</html>
